@@ -1,0 +1,109 @@
+*{
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+
+
+body{
+	background: #fff;
+	font: 12px Arial, sans-serif;
+}
+
+/********************************************
+* Navigation								*
+********************************************/
+nav{
+	width:100%;
+	height: 80px;
+}
+
+nav a{
+	display: block;
+	color: #666;
+	float: left;
+	font-size: 30px;
+	text-decoration: none;
+	width: 140px;
+	position: relative;
+	margin-right: 70px;
+	top: 10px;
+}
+
+nav a *{
+	-webkit-transition: color 500ms ease;
+	-moz-transition: color 500ms ease;
+	-o-transition: color 500ms ease;
+	-ms-transition: color 500ms ease;
+	transition: color 500ms ease;
+}
+
+nav a:hover *{
+	color:#333;
+}
+
+nav a.home{
+	width: 300px;
+	top: 0;
+}
+
+nav a div.icon{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top: 4px;
+	left: -35px;
+	color: #999;
+}
+
+nav a h2{
+	font: 16px Abel, sans-serif;
+	color:#666;
+	text-decoration: none;
+}
+
+nav a p{
+	font: 12px Arial, sans-serif;
+	color: #999;
+	margin-top: 5px;
+	display: block;
+}
+
+/********************************************
+* Header									*
+********************************************/
+header{
+	height: 300px;
+	width: 100%;
+	position: relative;
+}
+
+header .slideshow{
+	position: absolute;
+	width: 600px;
+	left: 50%;
+	margin-left: -300px;
+	z-index: 1;
+	margin-top: 40px;
+}
+
+header .slideshow li{
+	position: relative;
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba( 0,0,0,0.3),1px 1px 8px rgba( 0,0,0,0.3);
+}
+
+header .slideshow li .icon{
+	position: absolute;
+	left: -130px;
+	font-size: 80px;
+}
+
+header .slideshow li h3{
+	font: 40px Abel, sans-serif;
+	margin-bottom: 10px;
+}
+
+header .slideshow li p{
+	font-size: 18px;
+}
