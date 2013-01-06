@@ -1,0 +1,62 @@
+#introduction{
+
+}
+
+#introduction .introductionContainer{
+	float: left;
+	height: 300px;
+	position: relative;
+}
+
+#introduction .introductionContainer.center{
+	width: 50px;
+}
+
+.syntaxhighlighter{
+	background: #f6f6f6;
+}
+body #introduction .syntaxhighlighter *{
+	background: none !important;
+}
+#introduction .introductionContainer .edenServer{
+	-webkit-transform: rotate( 90deg );
+	padding: 5px;
+	border: 1px dashed #aaa;
+	background: #f6f6f6;
+	font: 50px Abel,sans-serif;
+	width: 300px;
+	text-align: center;
+	color: #aaa;
+	position: absolute;
+	top: 118px;
+}
+#introduction .giantBracket{
+	font-size: 300px;
+}
+/*****************************
+* FOLDER TREE				 *
+*****************************/
+#introduction .folderTree{
+	font-size: 11px;
+	line-height: 14px;
+	height: 200px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+#introduction .folderTree li{
+	cursor:pointer;
+}
+
+#introduction .folderTree li:hover{
+	color: #000;
+}
+
+#introduction .folderTree li:hover ul{
+	color: #333;
+}
+
+#introduction .codesample{
+	width: 550px;
+	background: #f6f6f6;
+}

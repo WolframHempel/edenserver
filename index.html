@@ -1,51 +1,306 @@
 <!DOCTYPE>
 <html>
 	<head>
+		<title>Eden Server</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/BgCanvas.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/FolderTree.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
+
+			
+	
+		<script type="text/javascript" src="js/shCore.js"></script>
+		<script type="text/javascript" src="js/shBrushJScript.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/shCoreDefault.css"/>
+
+
 		<link type="text/css" rel="stylesheet" media="screen" href="css/screen.css" />
+		<link type="text/css" rel="stylesheet" media="screen" href="css/introduction.css" />
 		<link type="text/css" rel="stylesheet" media="screen" href="css/font-awesome.css" />
+		<link type="text/css" rel="stylesheet" media="screen" href="css/bootstrap.min.css" />
+		
+		<link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+		
 	</head>
 	<body>
+		<div  id="myModal"  class="modal hide fade">
+		  <div class="modal-header">
+		    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		    <h3>Coming soon</h3>
+		  </div>
+		  <div class="modal-body">
+		    <p>Sorry, a decent documentation is on its way, but not quite here yet. 
+		    	For some early examples please have a look at /app in your eden folder</p>
+		  </div>
+		  <div class="modal-footer">
+		  	<button class="btn" data-dismiss="modal" aria-hidden="true">OK</button>
+		  </div>
+		</div>
 		<nav>
-			<a href="#" class="home">
-				<img 
-					src="img/EdenServerLogo.png" 
-					title="Eden Server" 
-					width="299" 
-					height="80" 
-					alt="A fast and simple server for large JavaScript applications" 
-				/>
-			</a>
-			<a href="#">
-				<div class="icon icon-book"></div>
-				<h2>Documentation</h2>
-				<p>General introduction and API docs</p>
-			</a>
-			<a href="#">
-				<div class="icon icon-cog"></div>
-				<h2>Examples</h2>
-				<p>Demo apps, config files and usage of the js client</p>
-			</a>
-			<a href="#">
-				<div class="icon icon-github"></div>
-				<h2>Fork on Github</h2>
-				<p>Get every update straight away</p>
-			</a>
+			<div class="centeredRow">
+				<div class="row">
+					<a href="/" class="home span3">
+					<img 
+						src="img/EdenServerLogo.png" 
+						title="Eden Server" 
+						width="299" 
+						height="80" 
+						alt="A fast and simple server for large JavaScript applications" 
+					/>
+					</a>
+					<a href="#" class="span2 offset1">
+						<div class="icon icon-book"></div>
+						<h2>Documentation</h2>
+						<p>General introduction and API docs</p>
+					</a>
+					<a href="#" class="span2 offset1">
+						<div class="icon icon-cog"></div>
+						<h2>Examples</h2>
+						<p>Demo apps, config files and usage of the js client</p>
+					</a>
+					<a href="https://github.com/WolframHempel/eden-server" class="last span2 offset1">
+						<div class="icon icon-github"></div>
+						<h2>Fork on Github</h2>
+						<p>Get every update straight away</p>
+					</a>
+				</div>
+			</div>
 		</nav>
 		<header>
-			<div class="slideshow">
-				<ul>
-					<li>
-						<div class="icon icon-forward icon-large"></div>
-						<h3>Fast</h3>
-						<p>Abel is a modern interpretation of the condensed flat-sided sans serif. 
-							Originally used for newspaper headlines and posters, 
-							this style can also be used for text on the web.</p>
-					</li>
-				</ul>
+			<div class="centeredRow">
+				<div class="slideshow">
+					<ul>
+						<li>
+							<div class="icon icon-forward"></div>
+							<h3>Eden Server</h3>
+							<p>A fast, simple yet powerful server for large, modularised javascript applications.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="downloadOverlay">
+					<div class="margin">
+						<p>
+							EdenServer is in a very early Beta-state. 
+							It should be fully functional; however it might be a bit early to use it in production yet. 
+							Once it reaches Alpha status it will come as a download package, until then please fork it on Github.
+						</p>
+						<!-- AddThis Button BEGIN -->
+
+						<div class="addthis_toolbox addthis_default_style ">
+						<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+						<a class="addthis_button_tweet"></a>
+						<a class="addthis_counter addthis_pill_style"></a>
+						</div>
+						<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+						<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-50e95c6d15b0af93"></script>
+						<!-- AddThis Button END -->
+						<a href="https://github.com/WolframHempel/eden-server" target="_blank" class="btn btn-large"><i class="icon-github"></i>&nbsp;Fork on Github</a>
+					</div>
+				</div>
 			</div>
 		</header>
+		<div id="introduction" class="centeredRow">
+			<div class="row">
+				<div class="span6">
+					<h2>Why EdenServer?</h2>
+					<p>
+						EdenServer continues where AMD left off. 
+						It recursively bundles files, resolves dependencies, 
+						adds assets such as html and css and runs pipeline 
+						tasks such as minification and compilation (e.g.less).
+					</p>
+					<p>
+						And it does all of that highly efficient while you develop as well as in production.
+					</p>
+				</div>
+				<div class="span6">
+					<h2>Starting the server</h2>
+					<p>Fork or download EdenServer from Github. It is written in node.js, 
+						so if you haven't installed node yet, you can download it at <a href="http://nodejs.org/">nodejs.org</a>
+						To start it, run:</p>
+					<pre class="brush: js;toolbar: false;gutter: false;">
+						cd server
+						node start.js
+					</pre>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span6">
+					<h2>Overview</h2>
+					<p>This is just a quick introduction into some of the features of EdenServer.</p>
+					<p>
+						A proper tutorial and documentation will follow soon. 
+						For the time being please have a look at the example applications in the /apps directory. 
+					</p>
+				</div>
+				<div class="span6">
+					<h2>Modules</h2>
+					<p>
+						A module can be any combination of JavaScript, HTML, CSS and other assets. 
+						It can depend on other modules. EdenServer will create a closure around 
+						your modules so that everything within it is private to that module only.
+					</p>
+					<p>
+						EdenServer doesn’t expect any specific folder structure. 
+						Each module shoud have at least a js OR html OR css folder.
+						Subfolders within these will be scanned and bundled recoursively.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span4">
+					<h3>Requiring a module</h3>
+					<p> 
+						In order to require a module use <code>eden.require</code>. 
+						This function works very much like the require.js equivalent. To require
+						the module from the folder structure example use
+						<pre class="brush: js;toolbar: false;gutter: false;">
+							eden.require( 
+								"myApp/modules/stockchart", 
+								function( StockChart ){
+								 	var chart = new StockChart();
+								}
+							);
+						</pre>
+					</p> 
+				</div>
+				<div class="span4">
+					<h3>Module specific keywords</h3>
+					<p> 
+						Within each module Eden will inject two specific keywords, <code>module</code> 
+						and <code>exports</code>. 
+						<code>module</code> is used to access assets that are specific to that module, e.g.  
+						<code>module.get( "html", "header" )</code> would return the contents of the header.html 
+						file in the modules html folder. <code>module.path</code> contains the path the module had 
+						been requested with.
+					</p> 
+				</div>
+				<div class="span4">
+					<h3>Example Folder Structure</h3>
+					<ul class="folderTree">
+						<li class="folder open"><i class="icon-folder-open"></i>myApp
+							<ul>
+								<li class="folder open"><i class="icon-folder-open"></i>modules
+									<ul>
+										<li class="folder open"><i class="icon-folder-open"></i>stockchart
+											<ul>
+												<li class="folder open"><i class="icon-folder-open"></i>js
+													<ul>
+														<li class="folder"><i class="icon-folder-open"></i>header
+															<ul>
+																<li class="file"><i class="icon-file"></i>Legend.js</li>
+															</ul>
+														</li>
+														<li class="folder"><i class="icon-folder-open"></i>chart
+															<ul>
+																<li class="file"><i class="icon-file"></i>Chartline.js</li>
+																<li class="file"><i class="icon-file"></i>Grid.js</li>
+															</ul>
+														</li>
+														<li class="file"><i class="icon-file"></i>Chart.js</li>
+														<li class="file"><i class="icon-file"></i>eden.json</li>
+													</ul>
+												</li>
+												<li class="folder"><i class="icon-folder-open"></i>css
+													<ul>
+														<li class="file"><i class="icon-file"></i>screen.css</li>
+														<li class="file"><i class="icon-file"></i>detail.css</li>
+													</ul>
+												</li>
+												<li class="folder"><i class="icon-folder-open"></i>html
+													<ul>
+														<li class="file"><i class="icon-file"></i>template.html</li>
+														<li class="file"><i class="icon-file"></i>label.html</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="folder open"><i class="icon-folder-open"></i>thirdparty
+									<ul>
+										<li class="folder"><i class="icon-folder-open"></i>jquery
+											<ul>
+												<li class="folder"><i class="icon-folder-open"></i>js
+													<ul>
+														<li class="file"><i class="icon-file"></i>jQuery.js</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li class="folder"><i class="icon-folder-open"></i>raphael
+											<ul>
+												<li class="folder"><i class="icon-folder-open"></i>js
+													<ul>
+														<li class="file"><i class="icon-file"></i>Raphael.js</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="span4">
+					<h3>eden.json files</h3>
+					<p>
+						eden.json files are used to configure dependencies and pipeline tasks. 
+						They can be placed at any level of the folder structure. 
+						They extend each other downwards (a setting in myApp/modules/eden.json would 
+						be overwritten by the same setting in myApp/modules/myModule/eden.json) 
+					</p>
+					<pre class="brush: js;toolbar: false;gutter: false;">
+					{
+					  "dependencies": {
+					    "ko": "../thirdparty/knockout",
+					    "$": "tplTest/thirdparty/jQuery"
+					  }
+					}
+					</pre>
+				</div>
+				<div class="span4">
+					<h3>javascript client</h3>
+					<p>
+						The javascript client is served at /eden.js. It
+						is specific to the instance of the server, so it can not
+						be served from the file system.
+					</p>
+					<h3>http server</h3>
+					<p>
+						EdenServer is also a great http server for static files.
+						It's using node-static internally which handles caching,
+						mimetype lookups and all other http functionality.
+					</p>
+				</div>
+				<div class="span4">
+					<h3>What's happening internally?</h3>
+					<p>
+						Whenever a module is requested for the first time
+						eden server reads all files, runs all pipeline tasks
+						and stores a ready-to-be-served string for the entire
+						module content in memory.
+					</p>
+					<p>
+						It also add's file watcher to every file and folder within
+						that module. If a change occurs, only that file or folder will
+						be re-read and bundled, making EdenServer highly efficient for development.
+					</p>
+					<p>
+						Oh, right...if a request is made for a module that's still being bundled
+						the request is held and will only be served once the bundling finished.
+
+					</p>
+				</div>
+			</div>
+		</div>
+		<footer>&copy; 2012 Wolfram Hempel - Released under BSD free software license</footer>
 	</body>
 </html>

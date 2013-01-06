@@ -10,6 +10,20 @@ body{
 	font: 12px Arial, sans-serif;
 }
 
+body, html{
+	height: 100%;
+}
+
+.centeredRow{
+	width: 970px;
+	position: absolute;
+	left: 50%;
+	margin-left: -485px;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6{
+	font-family: Abel, sans-serif;
+}
 /********************************************
 * Navigation								*
 ********************************************/
@@ -24,9 +38,9 @@ nav a{
 	float: left;
 	font-size: 30px;
 	text-decoration: none;
-	width: 140px;
+	/*width: 140px;*/
 	position: relative;
-	margin-right: 70px;
+	/*margin-right: 104px;*/
 	top: 10px;
 }
 
@@ -36,22 +50,30 @@ nav a *{
 	-o-transition: color 500ms ease;
 	-ms-transition: color 500ms ease;
 	transition: color 500ms ease;
+	text-decoration: none !important;
 }
 
 nav a:hover *{
 	color:#333;
+	text-decoration: none !important;
 }
-
 nav a.home{
-	width: 300px;
+	position: relative;
 	top: 0;
+}
+nav a.home img{
+	width: 299px;
+	height: 80px;
+	max-width: none;
+	position: relative;
+	left: -65px;
 }
 
 nav a div.icon{
 	width: 30px;
 	height: 30px;
 	position: absolute;
-	top: 4px;
+	top: 10px;
 	left: -35px;
 	color: #999;
 }
@@ -60,6 +82,7 @@ nav a h2{
 	font: 16px Abel, sans-serif;
 	color:#666;
 	text-decoration: none;
+	margin: 0;
 }
 
 nav a p{
@@ -73,16 +96,18 @@ nav a p{
 * Header									*
 ********************************************/
 header{
-	height: 300px;
 	width: 100%;
 	position: relative;
 }
 
+header .centeredRow{
+	height: 100%;
+}
+
 header .slideshow{
-	position: absolute;
+	position: relative;
 	width: 600px;
-	left: 50%;
-	margin-left: -300px;
+
 	z-index: 1;
 	margin-top: 40px;
 }
@@ -95,15 +120,52 @@ header .slideshow li{
 
 header .slideshow li .icon{
 	position: absolute;
-	left: -130px;
-	font-size: 80px;
+	top: 38px;
+	left: -43px;
+	font-size: 70px;
 }
-
 header .slideshow li h3{
 	font: 40px Abel, sans-serif;
 	margin-bottom: 10px;
+	margin: 0 0 0 40px;
 }
 
 header .slideshow li p{
 	font-size: 18px;
+	margin: 0 0 0 40px;
+}
+
+header .downloadOverlay{
+	position: absolute;
+	width: 300px;
+	height: 100%;
+	background: rgba( 0, 0, 0, 0.7 );
+	left: 670px; 
+	top: 0;
+	color: #fff;
+}
+
+header .downloadOverlay .margin{
+	margin: 10px;
+}
+
+header .downloadOverlay .btn {
+	position: absolute;
+	bottom: 20px;
+	left: 60px;
+}
+
+header .downloadOverlay .btn i{
+	vertical-align: baseline;
+}
+
+footer{
+	background: #f6f6f6;
+	border-top: 1px solid #ccc;
+	padding:3px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	font-size: 11px;
 }
